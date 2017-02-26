@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  p { font-size: 1em; color: #666 }
+  .container {
+    max-width: 50em;
+    margin: auto;
+    display: flex;
+    flex: 1 1 0;
+    box-sizing: border-box;
+  }
+  a { color: #999; text-decoration: none; }
+  a:hover { color: #333; }
+  figure, .columns { display: none; }
+  h3 { font-size: 2em }
+  .side { flex: 0 0 35% }
+  .indice a, .sub a { display: block; }
+  .indice.fixed { position: fixed; top: 0; }
+  </style>
+  <script src="pub/js/indice.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="side">
+      <h1>&equiv; Índice</h1>
+      <div class="indice">
+        <h4>Tópicos</h4>
+      </div>
+      <div class="sub">
+        <h4>Sub items</h4>
+      </div>
+    </div>
+    <div class="post-content">
+      <p>Esta é uma grade simples de usar, bem intuitiva até.
+        A ideia é eliminar a necessidade de colocar classes em cada elemento dentro da grade.
+        Não é massante ver classes repetidas por todo o seu código?
+      </p>
+
+      <h4 id="por-que-tantas-classes">Por que tantas classes?</h4>
+      <p>Suponhamos que você precisa fazer uma seção de quatro colunas do seu leiate.
+        Como ela seria usando as frameworks disponíveis por aí?
+        Olhe só:
+      </p>
+
+      <figure class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe col-xs-12 col-md-3 col-sm-3 col-lg-3"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe col-xs-12 col-md-3 col-sm-3 col-lg-3"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe col-xs-12 col-md-3 col-sm-3 col-lg-3"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe col-xs-12 col-md-3 col-sm-3 col-lg-3"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          </code>
+        </pre>
+      </figure>
+
+      <p>Estes div’s estão com muitas classes, não?</p>
+
+      <p>E se você pudesse escrever o mesmo código como no exemplo abaixo?</p>
+
+      <figure class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"four columns one-phone"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sua-classe"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          </code>
+        </pre>
+      </figure>
+
+      <p>Bem melhor, hein? É isto que esta grade faz.</p>
+
+      <h4 id="ento-eu-vou-ter-que-parar-de-usar-minha-framework-favorita">Então eu vou ter que parar de usar minha framework favorita?</h4>
+      <p>Ehh, não… Você pode usá-la com qualquer framework que você ja usa.
+        Ela só funciona se você usar a classe <strong>grade</strong> no elemento pai.
+        Ela é discreta.
+      </p>
+
+      <p>Assim:</p>
+
+      <figure class="highlight">
+        <pre>
+          <code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grade"</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Seu conteúdo fica aqui --&gt;</span>
+            <span class="nt">&lt;/div&gt;</span></code>
+          </pre>
+        </figure>
+
+        <!-- Colunas -->
+        <h3>Colunas</h3>
+        <p>Defina um número de colunas somente uma vez, não em cada elemento.</p>
+
+        <!-- Auto -->
+        <h4>Colunas automáticas</h4>
+        <p>Cria colunas automaticamente, de acordo com o número de elementos.</p>
+        <div class="columns">
+          <div class="content">
+            <strong>Coluna 01</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 02</strong>
+            <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 03</strong>
+            <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+          </div>
+        </div>
+
+        <!-- Fixed -->
+        <h4>Colunas fixas</h4>
+        <p>Fixa o número de colunas. Pode-se usar <code>[número]-[query]</code> para especificar um número diferente em outra resolução.</p>
+        <div class="columns three one-phone">
+          <div class="content">
+            <strong>Coluna 01</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 02</strong>
+            <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 03</strong>
+            <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+          </div>
+        </div>
+
+        <!-- Stretch -->
+        <h4>Colunas esticadas</h4>
+        <p>No caso de suas colunas não derem um número exato, ou faltarem algumas para preencher o seu layout, use esta classe para esticar as colunas restantes e cobrir os espaços.</p>
+        <div class="four three-tablet stretch columns">
+          <div class="content">
+            <strong>Coluna 01</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 02</strong>
+            <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 03</strong>
+            <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 04</strong>
+            <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 05</strong>
+            <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 06</strong>
+            <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+          </div>
+        </div>
+
+        <!-- Stretch -->
+        <h4>Justificar colunas</h4>
+        <p>Justifique as colunas para usar todo o espaço disponível na linha.</p>
+        <div class="four three-tablet justify columns">
+          <div class="content">
+            <strong>Column 01</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 02</strong>
+            <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 03</strong>
+            <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 04</strong>
+            <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 05</strong>
+            <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 06</strong>
+            <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+          </div>
+        </div>
+
+        <h4>Distribuir colunas</h4>
+        <p>Distribua colunas uniformemente na linha.</p>
+        <div class="four three-tablet distribute columns">
+          <div class="content">
+            <strong>Coluna 01</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 02</strong>
+            <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 03</strong>
+            <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 04</strong>
+            <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 05</strong>
+            <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 06</strong>
+            <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+          </div>
+        </div>
+
+        <!-- Code -->
+
+        <figure class="highlight">
+          <pre>
+            <code class="language-html" data-lang="html">
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"four three-tablet distribute columns"</span><span class="nt">&gt;</span>
+              [seu html]
+              <span class="nt">&lt;/div&gt;</span>
+            </code>
+          </pre>
+        </figure>
+
+        <!-- No gutter -->
+        <h4>Sem margem</h4>
+        <p>Algumas vezes, quanto mais perto, melhor.</p>
+        <div class="four three-tablet stretch columns no-gutter">
+          <div class="content">
+            <strong>Coluna 01</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 02</strong>
+            <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 03</strong>
+            <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 04</strong>
+            <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 05</strong>
+            <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+          </div>
+          <div class="content">
+            <strong>Coluna 06</strong>
+            <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+          </div>
+        </div>
+        <!-- Code -->
+
+        <!-- Lines -->
+        <section class="container">
+          <h3>Linhas</h3>
+          <!-- Auto -->
+          <h4>Linhas automáticas</h4>
+          <p>Cria linhas automaticamente, de acordo com o número de elementos.</p>
+          <div class="columns three" style="height: 40vh">
+            <div class="content lines">
+              <div><strong>Linha 01</strong></div>
+              <div><strong>Linha 02</strong></div>
+              <div><strong>Linha 03</strong></div>
+            </div>
+            <div class="content lines">
+              <div><strong>Linha 01</strong></div>
+              <div><strong>Linha 02</strong></div>
+            </div>
+            <div class="content lines">
+              <div><strong>Linha 01</strong></div>
+            </div>
+          </div>
+          <!-- Code -->
+
+        </section>
+
+        <!-- Grid -->
+        <h3>Grade</h3>
+        <p>Use a classes somente onde você precisa delas.</p>
+        <h4>Divisão</h4>
+        <div class="grid-demo">
+          <div class="columns">
+            <div class="item quarter">quarter</div>
+            <div class="item"></div>
+            <div class="item quarter">quarter</div>
+          </div>
+
+          <div class="columns">
+            <div class="item"></div>
+            <div class="item half">half</div>
+            <div class="item"></div>
+          </div>
+
+          <div class="columns">
+            <div class="item seventh">seventh</div>
+            <div class="item"></div>
+          </div>
+
+          <div class="columns stretch no-gutter">
+            <div class="item eighth">eighth</div>
+            <div class="item "></div>
+            <div class="item half">half</div>
+            <div class="item eleventh">eleventh</div>
+          </div>
+
+          <h4>Multiply</h4>
+          <div class="columns stretch no-gutter">
+            <div class="item"></div>
+            <div class="item ten-times">ten-times</div>
+            <div class="item"></div>
+            <div class="item eleventh">eleventh</div>
+          </div>
+
+          <div class="columns no-gutter">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item three-times">three-times</div>
+          </div>
+
+          <!-- Reordering -->
+          <h3>Reordenação</h3>
+          <p>Use a class only where you need it.</p>
+          <div class="columns">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item first first-phone">7</div>
+          </div>
+
+          <div class="columns">
+            <div class="item last last-phone">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+          </div>
+
+          <!-- Nested grid -->
+          <h3>Grade aninhada</h3>
+          <p>Vários níveis permitidos.</p>
+          <div class="columns">
+            <div class="item">
+              <div class="columns">
+                <div class="item quarter"></div>
+                <div class="item">
+                  <div class="columns">
+                    <div class="item eighth"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item"></div>
+            <div class="item half">
+              <div class="columns">
+                <div class="item"></div>
+                <div class="item half">
+                  <div class="columns">
+                    <div class="item eighth"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                  </div>
+                </div>
+                <div class="item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Positioning -->
+        <h3>Posicionamento</h3>
+        <div class="position-demo center all block columns">
+          <div class="stuff to-top border text-center">
+            <h4>No topo</h4>
+            <small>Esta caixa tem a classe <code>to-top</code>.</small>
+          </div>
+          <div class="stuff border text-center">
+            <h4>Centro</h4>
+            <small>Este container tem as classes <code>center all</code>.</small>
+          </div>
+          <div class="stuff to-bottom border text-center">
+            <h4>Abaixo</h4>
+            <small>Esta caixa tem a classe <code>to-bottom</code>.</small>
+          </div>
+        </div>
+
+        <p><br></p>
+        <div class="position-demo center all block columns">
+          <div class="stuff to-left border  quarter text-center">
+            <h4>À esquerda</h4>
+            <small>Esta caixa tem a classe <code>to-left</code>.</small>
+          </div>
+          <div class="stuff to-right border quarter text-center">
+            <h4>À direita</h4>
+            <small>Esta caixa tem a classe <code>to-right</code>.</small>
+          </div>
+        </div>
+
+        <!-- Visibility -->
+        <h3>Visibilidade</h3>
+        <p>Mostre e esconda com classe. Literalmente.</p>
+        <div class="grid-demo">
+          <div class="columns">
+            <div class="visible-phone">
+              <h1><i class="fa fa-mobile"></i></h1>
+              <p class="text-center">Visible phone</p>
+            </div>
+            <div class="visible-tablet">
+              <h1><i class="fa fa-tablet"></i></h1>
+              <p class="text-center">Visible tablet</p>
+            </div>
+            <div class="visible-desktop">
+              <h1><i class="fa fa-desktop"></i></h1>
+              <p class="text-center">Visible desktop</p>
+            </div>
+          </div>
+          <div class="columns text-center visibility">
+            <p class="hidden-phone"><i class="fa fa-mobile"></i> <small>Hidden on phones</small></p>
+            <p class="hidden-tablet"><i class="fa fa-tablet"></i> <small>Hidden on tablet</small></p>
+            <p class="hidden-desktop"><i class="fa fa-desktop"></i> <small>Hidden on desktop</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var teum = new Indice();
+    teum.make();
+    teum.make(".post-content h4", ".sub");
+  })();
+  </script>
+</body>
+</html>
