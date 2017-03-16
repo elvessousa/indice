@@ -17,12 +17,13 @@
   // ----------------------------------------------------
   // Variables
   // ----------------------------------------------------
-  var $, anchor, el, item, items, link, listener, nav, slug, title, top;
+  var $, link, listener,
+    nav, slug, title, top;
 
   // ----------------------------------------------------
   // Object
   // ----------------------------------------------------
-  this.Indice = function() { };
+  this.Indice = function () {};
 
   // ----------------------------------------------------
   // Shortcut function
@@ -34,32 +35,38 @@
   // ----------------------------------------------------
   // Slugify
   // ----------------------------------------------------
-  String.prototype.toSlug = function(st) {
-    st = this.toLowerCase()
-    .replace(/[\u00C0-\u00C5]/ig,'a')
-    .replace(/[\u00C8-\u00CB]/ig,'e')
-    .replace(/[\u00CC-\u00CF]/ig,'i')
-    .replace(/[\u00D2-\u00D6]/ig,'o')
-    .replace(/[\u00D9-\u00DC]/ig,'u')
-    .replace(/[\u00D1]/ig,'n')
-    .replace('ç','c')
-    .replace(/[^a-z0-9 ]+/gi,'')
-    .trim().replace(/ /g,'-')
-    .replace(/[\-]{2}/g,'');
-    return (st.replace(/[^a-z\- ]*/gi,''));
+  String.prototype.toSlug = function () {
+    var from, to;
+
+    // Removes accents and spaces
+    str  = this.replace(/^\s+|\s+$/g, '');
+    str  = str.toLowerCase();
+    from = "ãàáäâèéëêìíïîõòóöôùúüûñç·/_,: ;";
+    to   = "aaaaaeeeeiiiiooooouuuunc------";
+
+    for (var i = 0, l = from.length; i < l; i++) {
+      str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+    }
+    str = str.replace(/[^a-z0-9 -]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-');
+    return str;
   };
 
   // ----------------------------------------------------
   // Create menu and anchors
   // ----------------------------------------------------
-  Indice.prototype.make = function(el, nav) {
+  Indice.prototype.make = function (el, nav) {
     document.addEventListener('DOMContentLoaded', function () {
-      el    = el ? $(el) : $("h3");
-      nav   = nav ? $(nav) : $(".indice");
+      var items, tops, size;
+      size  = document.body.scrollHeight;
+      el    = el ? $(el)  : $("h3");
+      nav   = nav ? $(nav): $(".indice");
       items = el.length;
+      tops  = [];
 
       for (var i = 0; i < items; i++) {
+        var etop, title, link, slug, anchor;
         item   = el[i];
+        etop   = el[i].offsetTop;
         title  = document.createTextNode(item.innerHTML);
         link   = document.createElement("a");
         slug   = item.innerHTML.toSlug();
@@ -73,12 +80,14 @@
         // Link inside sidebar
         link.appendChild(title);
         link.setAttribute("href", '#' + slug);
+        link.setAttribute("data-top", etop);
         link.setAttribute("class", 'indice-link link-' + slug);
         nav[0].appendChild(link);
+        tops.push(etop);
       }
 
       // Fixed menu
-      top      = nav[0].offsetTop;
+      top = nav[0].offsetTop;
       listener = function (y) {
         y = window.pageYOffset;
 
@@ -86,6 +95,21 @@
           nav[0].classList.add('fixed');
         } else {
           nav[0].classList.remove('fixed');
+        }
+
+        for (var t = 0; t < tops.length; t++) {
+          var aim, link, ntop, ltop;
+          etop = el[t].offsetTop;
+          aim  = $('.indice-link[data-top = "'+etop+'"]')[0];
+          ntop = (typeof(el[t+1]) != 'undefined') ? el[t+1].offsetTop : size;
+          link = $('.indice-link')[t];
+          ltop = parseInt(link.getAttribute('data-top'));
+
+          if (y >= etop && y <= ntop) {
+            aim.classList.add('in');
+          } else {
+            aim.classList.remove('in');
+          }
         }
       };
       window.addEventListener('scroll', listener, false);

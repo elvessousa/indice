@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    
+    p {
+      font-size: 1em;
+      color: #666
+    }
+    
+    .container {
+      max-width: 50em;
+      margin: auto;
+      display: flex;
+      flex: 1 1 0;
+      box-sizing: border-box;
+    }
+    
+    a {
+      color: #999;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: #333;
+    }
+    
+    figure,
+    .columns {
+      display: none;
+    }
+    
+    h3 {
+      font-size: 2em
+    }
+    
+    .side {
+      flex: 0 0 35%
+    }
+    
+    .indice a,
+    .sub a {
+      display: block;
+    }
+    
+    .indice.fixed {
+      position: fixed;
+      top: 0;
+    }
+    
+    .in {
+      font-weight: bold;
+    }
+  </style>
+  <script src="pub/js/indice.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="side">
+      <h1>&equiv; Índice</h1>
+      <div class="indice">
+        <h4>Tópicos</h4>
+      </div>
+      <div class="sub">
+        <h4>Sub items</h4>
+      </div>
+    </div>
+    <div class="post-content">
+      <h3>Title 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nisi, sit commodi illum doloribus, qui, delectus dignissimos
+        amet non quia, possimus rerum. Laborum culpa nam alias, tempore optio suscipit. Aliquid.</p>
+      <h3>Title 2</h3>
+      <p>Neque reprehenderit magni numquam illo autem nulla. Iure eius non magni id sequi esse animi officia, inventore consequatur
+        eaque velit explicabo! Illum incidunt quaerat cumque est, suscipit, necessitatibus eius officiis?</p>
+      <h3>Title 3</h3>
+      <p>Cupiditate ipsam, itaque magni nulla ipsum! Eligendi labore delectus repellendus nisi itaque earum sunt consequatur.
+        Fugiat asperiores officiis excepturi recusandae consequuntur obcaecati voluptates eligendi commodi omnis maiores
+        sed dignissimos, quasi?</p>
+      <h3>Title 4</h3>
+      <p>Minus rem illo consectetur! Distinctio in dolores, praesentium consequatur similique dolorem suscipit. Libero id at
+        totam. Earum nesciunt, quibusdam eum soluta assumenda aliquid voluptatem accusantium recusandae sequi quidem similique
+        omnis.</p>
+      <h3>Title 5</h3>
+      <p>Incidunt expedita dolores atque sint vero perferendis explicabo facere nostrum itaque inventore accusantium quos quibusdam
+        quaerat, natus quis temporibus tempore molestiae numquam architecto voluptate neque vitae eveniet quam. Fuga, iusto.</p>
+      <h3>Title 6</h3>
+      <p>Quidem, odio laborum. Necessitatibus, est voluptatibus alias a, ipsa ea ullam. Aliquid facere atque numquam debitis
+        eius saepe dolorum sit tenetur accusantium, voluptatibus nostrum excepturi reprehenderit quisquam assumenda maiores
+        repellat!</p>
+      <h3>Title 7</h3>
+      <p>Repellat aspernatur reprehenderit velit, molestias fugiat quos veniam. Distinctio nemo, non tempora cum animi dolorem
+        suscipit, aut qui dolor, enim laudantium voluptatibus quas rem amet, minus iusto consectetur eius saepe?</p>
+      <h3>Title 8</h3>
+      <p>Consequuntur blanditiis fuga minima itaque assumenda perferendis incidunt corrupti ad, delectus quod magnam eaque dolores
+        inventore atque provident alias fugit unde, dicta ea vel quo corporis cupiditate. Error, amet labore.</p>
+      <h3>Title 9</h3>
+      <p>Eaque dolor commodi cumque minus quae, tempore accusamus id! Voluptatum, fugiat rem voluptas velit aperiam nulla quam
+        sequi praesentium ea natus, a, quis dolores accusamus officiis, sed nisi quo similique!</p>
+      <h3>Title 10</h3>
+      <p>Odit repellendus, animi quas exercitationem architecto voluptatum voluptates, alias! Quaerat incidunt est adipisci
+        temporibus sed ad, pariatur minus, dolorum libero vel obcaecati sit numquam laborum repellat, iste excepturi necessitatibus?
+        Labore.</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var teum = new Indice();
+      teum.make();
+      // teum.make(".post-content h4", ".sub");
+    })();
+  </script>
+</body>
+
+</html>
