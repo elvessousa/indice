@@ -29,3 +29,5 @@ Temporary Items
 /node_modules
 /bin
 /bower_components
+.jekyll-metadata
+/_site
