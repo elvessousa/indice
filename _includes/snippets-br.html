@@ -1,0 +1,736 @@
+{% include banner.html %}
+
+<!-- Browsers -->
+<h3>Navegadores</h3>
+<p>Qualquer navegador moderno com suporte ao Flexbox poder utilizar esta grade.</p>
+<div class="columns three-tablet three-phone">
+  <div class="browser">
+    <i class="icon-ie"></i>
+    <span>11*</span>
+  </div>
+  <div class="browser">
+    <i class="icon-edge"></i>
+    <span>12+</span>
+  </div>
+  <div class="browser">
+    <i class="icon-safari"></i>
+    <span>9+</span>
+  </div>
+  <div class="browser">
+    <i class="icon-firefox"></i>
+    <span>28+</span>
+  </div>
+  <div class="browser">
+    <i class="icon-chrome"></i>
+    <span>29+</span>
+  </div>
+  <div class="browser">
+    <i class="icon-opera"></i>
+    <span>12.1+</span>
+  </div>
+</div>
+<small>* Alguns pequenos problemas podem ocorrer, já que este navegador usa tecnologia antiga.</small>
+
+<!-- Colunas -->
+<h3>Colunas</h3>
+<p>Defina um número de colunas somente uma vez, não em cada elemento.</p>
+<!-- Auto -->
+<h4>Colunas automáticas</h4>
+<p>Cria colunas automaticamente, de acordo com o número de elementos.</p>
+<div class="columns">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+</div>
+<!-- Code -->
+{% highlight html %}
+<div class="columns">
+  <div class="sua-classe">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+</div>
+{% endhighlight %}
+
+<!-- Fixed -->
+<h4>Colunas fixas</h4>
+<p>Fixa o número de colunas. Pode-se usar <code>[número]-[query]</code> para especificar um número diferente em outra resolução.</p>
+<div class="columns three one-phone">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+</div>
+<!-- Code -->
+{% highlight html %}
+<div class="columns three one-phone">
+  <div class="sua-classe">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+</div>
+{% endhighlight %}
+
+<!-- Stretch -->
+<h4>Colunas esticadas</h4>
+<p>No caso de suas colunas não derem um número exato, ou faltarem algumas para preencher o seu layout, use esta classe para esticar as colunas restantes e cobrir os espaços.</p>
+<div class="four three-tablet two-phone stretch columns">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+{% highlight html %}
+<div class="four three-tablet two-phone stretch columns">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+{% endhighlight %}
+
+<!-- Stretch -->
+<h4>Justificar colunas</h4>
+<p>Justifique as colunas para usar todo o espaço disponível na linha.</p>
+<div class="four three-tablet two-phone justify columns">
+  <div class="content">
+    <strong>Column 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+{% highlight html %}
+<div class="four three-tablet two-phone justify columns">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>Distribuir colunas</h4>
+<p>Distribua colunas uniformemente na linha.</p>
+<div class="four three-tablet two-phone distribute columns">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+
+<!-- Code -->
+{% highlight html %}
+<div class="four three-tablet two-phone distribute columns">
+  [seu html]
+</div>
+{% endhighlight %}
+<!-- No gutter -->
+<h4>Sem margem</h4>
+<p>Algumas vezes, quanto mais perto, melhor.</p>
+<div class="four three-tablet two-phone stretch columns no-gutter">
+  <div class="content">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="content">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+<!-- Code -->
+{% highlight html %}
+<div class="four three-tablet two-phone stretch columns no-gutter">
+  <div class="sua-classe">
+    <strong>Coluna 01</strong>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 02</strong>
+    <p>Pariatur adipisci non, blanditiis ad dolor fugit repudiandae.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 03</strong>
+    <p>Placeat, sequi, facere. Repellendus blanditiis dolor.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 04</strong>
+    <p>A nobis, dignissimos ipsam. Facere sequi, corrupti blanditiis?</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 05</strong>
+    <p>Fuga dolorum distinctio voluptatem nesciunt distinctio nam.</p>
+  </div>
+  <div class="sua-classe">
+    <strong>Coluna 06</strong>
+    <p>Nam, quaerat blanditiis hic consequatur, libero non!</p>
+  </div>
+</div>
+{% endhighlight %}
+
+{% include banner.html %}
+<!-- Lines -->
+<section class="linhas">
+  <h3>Linhas</h3>
+  <!-- Auto -->
+  <h4>Linhas automáticas</h4>
+  <p>Cria linhas automaticamente, de acordo com o número de elementos.</p>
+  <div class="columns three" style="height: 40vh">
+    <div class="content lines">
+      <div><strong>Linha 01</strong></div>
+      <div><strong>Linha 02</strong></div>
+      <div><strong>Linha 03</strong></div>
+    </div>
+    <div class="content lines">
+      <div><strong>Linha 01</strong></div>
+      <div><strong>Linha 02</strong></div>
+    </div>
+    <div class="content lines">
+      <div><strong>Linha 01</strong></div>
+    </div>
+  </div>
+  <!-- Code -->
+  {% highlight html %}
+  <div class="columns three" style="height: 40vh">
+    <div class="content lines">
+      <div><strong>Linha 01</strong></div>
+      <div><strong>Linha 02</strong></div>
+      <div><strong>Linha 03</strong></div>
+    </div>
+    <div class="content lines">
+      <div><strong>Linha 01</strong></div>
+      <div><strong>Linha 02</strong></div>
+    </div>
+    <div class="content lines">
+      <div><strong>Linha 01</strong></div>
+    </div>
+  </div>
+  {% endhighlight %}
+</section>
+
+<!-- Grid -->
+<h3>Grade</h3>
+<p>Use a classes somente onde você precisa delas.</p>
+<h4>Divisão</h4>
+<div class="grid-demo">
+  <div class="columns no-gutter">
+    <div class="item quarter">quarter</div>
+    <div class="item"></div>
+    <div class="item quarter">quarter</div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item quarter">quarter</div>
+    <div class="item"></div>
+    <div class="item quarter">quarter</div>
+  </div>
+  {% endhighlight %}
+  <div class="columns no-gutter">
+    <div class="item"></div>
+    <div class="item half">half</div>
+    <div class="item"></div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item"></div>
+    <div class="item half">half</div>
+    <div class="item"></div>
+  </div>
+  {% endhighlight %}
+  <div class="columns no-gutter">
+    <div class="item seventh">seventh</div>
+    <div class="item"></div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item seventh">seventh</div>
+    <div class="item"></div>
+  </div>
+  {% endhighlight %}
+  <div class="columns stretch no-gutter">
+    <div class="item eighth">eighth</div>
+    <div class="item "></div>
+    <div class="item half">half</div>
+    <div class="item eleventh">eleventh</div>
+  </div>
+  {% highlight html %}
+  <div class="columns stretch no-gutter">
+    <div class="item eighth">eighth</div>
+    <div class="item "></div>
+    <div class="item half">half</div>
+    <div class="item eleventh">eleventh</div>
+  </div>
+  {% endhighlight %}
+  <h4>Multiply</h4>
+  <div class="columns stretch no-gutter">
+    <div class="item"></div>
+    <div class="item ten-times">ten-times</div>
+    <div class="item"></div>
+    <div class="item eleventh">eleventh</div>
+  </div>
+  {% highlight html %}
+  <div class="columns stretch no-gutter">
+    <div class="item"></div>
+    <div class="item ten-times">ten-times</div>
+    <div class="item"></div>
+    <div class="item eleventh">eleventh</div>
+  </div>
+  {% endhighlight %}
+  <div class="columns no-gutter">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item three-times">three-times</div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item three-times">three-times</div>
+  </div>
+  {% endhighlight %}
+
+  <!-- Reordering -->
+  <h3>Reordenação</h3>
+  <p>Use a class only where you need it.</p>
+  <div class="columns no-gutter">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item first first-phone">7</div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item first first-phone">7</div>
+  </div>
+  {% endhighlight %}
+  <div class="columns no-gutter">
+    <div class="item last last-phone">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item last last-phone">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+  </div>
+  {% endhighlight %}
+
+  <!-- Nested grid -->
+  <h3>Grade aninhada</h3>
+  <p>Vários níveis permitidos.</p>
+  <div class="columns no-gutter">
+    <div class="item">
+      <div class="columns no-gutter">
+        <div class="item quarter"></div>
+        <div class="item">
+          <div class="columns no-gutter">
+            <div class="item eighth"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item"></div>
+    <div class="item half">
+      <div class="columns no-gutter">
+        <div class="item"></div>
+        <div class="item half">
+          <div class="columns no-gutter">
+            <div class="item eighth"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+        </div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </div>
+  {% highlight html %}
+  <div class="columns no-gutter">
+    <div class="item">
+      <div class="columns no-gutter">
+        <div class="item quarter"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+    <div class="item"></div>
+    <div class="item half">
+      <div class="columns no-gutter">
+        <div class="item"></div>
+        <div class="item half"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </div>
+  {% endhighlight %}
+</div>
+
+<!-- Positioning -->
+<h3>Posicionamento</h3>
+<div class="position-demo center all block columns">
+  <div class="stuff to-top border text-center">
+    <h4>No topo</h4>
+    <small>Esta caixa tem a classe <code>to-top</code>.</small>
+  </div>
+  <div class="stuff border text-center">
+    <h4>Centro</h4>
+    <small>Este container tem as classes <code>center all</code>.</small>
+  </div>
+  <div class="stuff to-bottom border text-center">
+    <h4>Abaixo</h4>
+    <small>Esta caixa tem a classe <code>to-bottom</code>.</small>
+  </div>
+</div>
+{% highlight html %}
+<div class="position-demo center all block columns">
+  <div class="stuff to-top border text-center">
+    <h4>No topo</h4>
+    <small>Esta caixa tem a classe <code>to-top</code>.</small>
+  </div>
+  <div class="stuff border text-center">
+    <h4>Centro</h4>
+    <small>Este container tem as classes <code>center all</code>.</small>
+  </div>
+  <div class="stuff to-bottom border text-center">
+    <h4>Abaixo</h4>
+    <small>Esta caixa tem a classe <code>to-bottom</code>.</small>
+  </div>
+</div>
+{% endhighlight %}
+<br>
+<div class="position-demo center all block columns">
+  <div class="stuff to-left border  quarter text-center">
+    <h4>À esquerda</h4>
+    <small>Esta caixa tem a classe <code>to-left</code>.</small>
+  </div>
+  <div class="stuff to-right border quarter text-center">
+    <h4>À direita</h4>
+    <small>Esta caixa tem a classe <code>to-right</code>.</small>
+  </div>
+</div>
+{% highlight html %}
+<div class="position-demo center all block columns">
+  <div class="stuff to-left border  quarter text-center">
+    <h4>À esquerda</h4>
+    <small>Esta caixa tem a classe <code>to-left</code>.</small>
+  </div>
+  <div class="stuff to-right border quarter text-center">
+    <h4>À direita</h4>
+    <small>Esta caixa tem a classe <code>to-right</code>.</small>
+  </div>
+</div>
+{% endhighlight %}
+
+<!-- Visibility -->
+<h3>Visibilidade</h3>
+<p>Mostre e esconda com classe. Literalmente.</p>
+<div class="grid-demo">
+  <div class="columns">
+    <div class="visible-phone">
+      <h1><i class="icon-mobile"></i></h1>
+      <p class="text-center">Visível em smartphones</p>
+    </div>
+    <div class="visible-tablet">
+      <h1><i class="icon-tablet"></i></h1>
+      <p class="text-center">Visível em tablets</p>
+    </div>
+    <div class="visible-desktop">
+      <h1><i class="icon-display"></i></h1>
+      <p class="text-center">Visível em desktop</p>
+    </div>
+  </div>
+  <div class="columns text-center visibility">
+    <p class="hidden-phone">
+      <i class="icon-mobile"></i>
+      <small>Escondido em smartphones</small>
+    </p>
+    <p class="hidden-tablet">
+      <i class="icon-tablet"></i>
+      <small>Escondido em tablets</small>
+    </p>
+    <p class="hidden-desktop">
+      <i class="icon-display"></i>
+      <small>Escondido em desktops</small>
+    </p>
+  </div>
+  {% highlight html %}
+  <div class="visible-phone">
+    <h1>
+      <i class="icon-mobile"></i>
+    </h1>
+    <p class="text-center">Visível em smartphones</p>
+  </div>
+  <div class="visible-tablet">
+    <h1>
+      <i class="icon-tablet"></i>
+    </h1>
+    <p class="text-center">Visível em tablets</p>
+  </div>
+  <div class="visible-desktop">
+    <h1>
+      <i class="icon-display"></i>
+    </h1>
+    <p class="text-center">Visível em desktop</p>
+  </div>
+  {% endhighlight %}
+  {% highlight html %}
+  <p class="hidden-phone">
+    <i class="icon-mobile"></i>
+    <small>Escondido em smartphones</small>
+  </p>
+  <p class="hidden-tablet">
+    <i class="icon-tablet"></i>
+    <small>Escondido em tablets</small>
+  </p>
+  <p class="hidden-desktop">
+    <i class="icon-display"></i>
+    <small>Escondido em desktops</small>
+  </p>
+  {% endhighlight %}
+</div>
+
+<!-- Masonry -->
+<h3>Masonry</h3>
+<p>Mostre suas imagens em colunas, sem qualquer javascript.</p>
+<div class="mason three three-tablet two-phone">
+  <div class="item">
+    <img src="../../img/bible.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/girl.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/tower.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/car.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/rocks.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/sea.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/building.jpeg" alt="Image">
+  </div>
+  <div class="item">
+    <img src="../../img/tv.jpeg" alt="Image">
+  </div>
+</div>
+{% highlight html %}
+<div class="mason three three-tablet two-phone">
+  [seu html aqui]
+</div>
+{% endhighlight %}
+
+<!-- Embeds -->
+<section class="embeds">
+  <h3>Embeds</h3>
+  <p>Cole o seu código, diga a proporção e boom... Funciona!</p>
+  <div class="mason three two-phone">
+    <div class="item">
+      <h5>Widescreen (16:9)</h5>
+      <div class="embed widescreen">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ia9uXumYrXQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="item">
+      <h5>SD (4:3)</h5>
+      <div class="embed sd">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="item">
+      <h5>Phone (9:16)</h5>
+      <div class="embed phone">
+        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgeracaomonarquia%2Fvideos%2F209006036180794%2F&show_text=0&width=400" width="400" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      </div>
+    </div>
+    <div class="item">
+      <h5>Cinema (2:35/1)</h5>
+      <div class="embed cinema-wide">
+        <iframe width='640' height='360' src='http://cache.vevo.com/assets/html/embed.html?video=GB1101500747' frameborder='0' allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="item">
+      <h5>Square (1:1)</h5>
+      <div class="embed square">
+        <iframe src="https://vine.co/v/i15Am1uba61/embed/simple" width="480" height="480" frameborder="0"></iframe>
+        <script src="https://platform.vine.co/static/scripts/embed.js"></script>
+      </div>
+    </div>
+  </div>
+  {% highlight html %}
+  <div class="embed [widescreen | sd | phone | cinema-wide | square]">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KJoP0dJyToo" frameborder="0" allowfullscreen></iframe>
+  </div>
+  {% endhighlight %}
+</section>
