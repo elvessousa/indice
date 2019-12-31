@@ -1,57 +1,60 @@
 ---
-layout: page
+layout: documentation
 title: Getting started
 permalink: /en/download/
 language: en
-thumbnail: /img/grade.jpg
+thumbnail: /img/indice.jpg
 ---
+> See the small table of contents at left? 
+It is Indice working. It's discreet, but works as a charm.
 
 ### Download the files
-This grid is available as a full package containing all the need files to compile.
-It is made in **Sass**, but a **precompiled css** is included in the `pub/css` folder.
+This script is available as a full package containing all the need files to compile.
+It's made in vanilla javascript so you don't have to include any inconvenient third-party library. There is a simple stylesheet for the elements Indice makes be understandable in the screen.
+
+The sources are in the **src** folder with the uncompressed javascript file and the **sass** original files.
+
+<script src="https://gumroad.com/js/gumroad.js"></script>
+<a class="gumroad-button" href="https://gum.co/IYGJC" target="_blank">Download "Indice"</a> &nbsp; &nbsp; [**Github repo**](https://github.com/elvessousa/indice)
+
+### Using the script
 To use it, copy to your project link it in your page and be happy:
 
 {% highlight html %}
-  <link rel="stylesheet" href="path/to/css/grade.css">
+  <link rel="stylesheet" href="path/to/css/indice.css">
+  <script src="path/to/js/indice.min.js">
 {% endhighlight %}
 
-<script src="https://gumroad.com/js/gumroad.js"></script>
-<a class="gumroad-button" href="https://gum.co/grade-css-grid" target="_blank">Download "Grade"</a>
-[**Github repo**](https://github.com/elvessousa/grade)
+And add this callback in your page's code:
+{% highlight html %}
+  <script>
+    (function(){
+      var toc = new Indice();
+      toc.make(".your-container-class h3", ".indice");
+    })();
+  </script>
+{% endhighlight %}
+
+For a basic use, it's all you need to do!
 
 ---
 
 ### Using the source code
-
-#### NPM: node package manager
-If you don't have node installed, download it from the [site](https://nodejs.org), or use a package manager of your choice.
-
-
-#### Gulp
-It is a task manager. More info at [Gulp's site](http://gulpjs.com).
-To install it in your system run:
+If you don't have **NodeJS** installed, download it from the [site](https://nodejs.org). This project uses **Yarn**. In order do install it in the system, after installing **NodeJS**, do the following in a terminal:
 
 {% highlight shell %}
-  $ (sudo) npm install -g gulp
-{% endhighlight %}
-
-To run the task in the gulpfile.js, run:
-
-{% highlight shell %}
-  $ gulp
+  $ npm install -g yarn
 {% endhighlight %}
 
 ---
 
 
 ### Install
-In order to install and run, check if all dependencies are satisfied.
-If it is, run the following in a terminal:
+In order to run, type the following in a terminal:
 
 {% highlight shell %}
-  $ npm install
+  $ yarn install
+  $ yarn run serve
 {% endhighlight %}
 
-{% highlight shell %}
-  $ bower install
-{% endhighlight %}
+You're ready to go!
