@@ -3,13 +3,13 @@ pt:
 - links:
   - name: Iniciando
     url: /pt/download
-  - name: Documentação
-    url: /pt/docs
+  # - name: Documentação
+    # url: /pt/docs
 
 # English menu
 en:
 - links:
   - name: Getting started
     url: /en/download
-  - name: Documentation
-    url: /en/docs
+  # - name: Documentation
+    # url: /en/docs
