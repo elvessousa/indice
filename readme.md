@@ -5,7 +5,7 @@ Este repositório contém uma estrutura básica para projetos web e visa facilit
 ***
 
 ## Estrutura de diretórios
-- **pub:** Contém CSS, JS e imagens finais para uso no frontend.
+- **dist:** Contém CSS, JS e imagens finais para uso no frontend.
 - **src:** Contém arquivos fonte Sass, JS ou outros que sejam necessários para o projeto.
 
 #### Diretórios temporários
