@@ -2,31 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
-  <style>
-  body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-  }
-  p { font-size: 1em; color: #666 }
-  .container {
-    max-width: 50em;
-    margin: auto;
-    display: flex;
-    flex: 1 1 0;
-    box-sizing: border-box;
-  }
-  a { color: #999; text-decoration: none; }
-  a:hover { color: #333; }
-  figure, .columns { display: none; }
-  h3 { font-size: 2em }
-  .side { flex: 0 0 35% }
-  .indice a, .sub a { display: block; }
-  .indice.fixed { position: fixed; top: 0; }
-  .in { font-weight: bold; }
-  </style>
-  <script src="pub/js/indice.min.js"></script>
+  <title>Example</title>
+  <link rel="stylesheet" href="dist/css/layout.css">
+  <link rel="stylesheet" href="dist/css/indice.css">
+  <script src="dist/js/indice.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -468,9 +447,9 @@
 
   <script>
   (function() {
-    var teum = new Indice();
-    teum.make();
-    teum.make(".post-content h4", ".sub");
+    var toc = new Indice();
+    toc.make();
+    toc.make(".post-content h4", ".sub");
   })();
   </script>
 </body>

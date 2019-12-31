@@ -1,0 +1,20 @@
+$base-fonts: 'Helvetica Neue', Arial, sans-serif
+$text-color: #666
+$link-color: #999
+
+.indice,
+.sub
+  a
+    color: $link-color
+    display: block
+    text-decoration: none
+
+    &:hover
+      color: darken($link-color, 50%)
+
+  &.fixed
+    position: fixed
+    top: 0
+
+  .in
+    font-weight: bold
