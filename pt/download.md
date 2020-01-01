@@ -6,7 +6,7 @@ language: pt
 thumbnail: /img/grade.jpg
 ---
 
-> Você consegue ver o pequeno índice à esquerda. É o Indice funcionando. É discreto, mas funciona muito bem.
+> Você consegue ver o pequeno índice à esquerda. É o Indice funcionando. É discreto, mas funciona muito bem. **Sua versão minificada tem apenas 1KB!**
 
 ### Baixe os arquivos
 Este script está disponível com um pacote completo contendo todos os arquivos necessários para compilar a fonte. É feito em javascript puro para que você não tenha que incluir bibliotecas de terceiros. Há uma simples folha de estilos inclusa para que os elementos croados pelo Indice seja compreensíveis na tela.

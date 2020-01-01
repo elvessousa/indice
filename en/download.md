@@ -6,7 +6,7 @@ language: en
 thumbnail: /img/indice.jpg
 ---
 > See the small table of contents at left? 
-It is Indice working. It's discreet, but works as a charm.
+It is Indice working. It's discreet, but works as a charm. **It's minified version is just 1KB!**
 
 ### Download the files
 This script is available as a full package containing all the need files to compile.
